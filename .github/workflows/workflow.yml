@@ -53,6 +53,11 @@ jobs:
       matrix:
         language: [ 'javascript' ]  # Adjust this for the languages in your repo
 
+    permissions:
+      actions: write  # Allows access to GitHub Actions
+      contents: read  # Allows access to the repository contents
+      security-events: write  # Necessary for CodeQL analysis
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
